@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patterns - Pattern Printing Guide</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Pattern Printing Guide</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="patterns.html">Patterns</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="basic-patterns">
+            <h2>Basic Patterns</h2>
+            <div class="pattern">
+                <h3>Single Star</h3>
+                <pre><code>
+#include &lt;stdio.h&gt;
+
+int main() {
+    printf("*\n");
+    return 0;
+}
+                </code></pre>
+            </div>
+            <div class="pattern">
+                <h3>Square of Stars</h3>
+                <pre><code>
+#include &lt;stdio.h&gt;
+
+int main() {
+    for(int i = 0; i &lt; 5; i++) {
+        for(int j = 0; j &lt; 5; j++) {
+            printf("*");
+        }
+        printf("\n");
+    }
+    return 0;
+}
+                </code></pre>
+            </div>
+            <div class="pattern">
+                <h3>Right-Angled Triangle</h3>
+                <pre><code>
+#include &lt;stdio.h&gt;
+
+int main() {
+    for(int i = 1; i &lt;= 5; i++) {
+        for(int j = 1; j &lt;= i; j++) {
+            printf("*");
+        }
+        printf("\n");
+    }
+    return 0;
+}
+                </code></pre>
+            </div>
+        </section>
+
+        <section id="intermediate-patterns">
+            <h2>Intermediate Patterns</h2>
+            <div class="pattern">
+                <h3>Pyramid</h3>
+                <pre><code>
+#include &lt;stdio.h&gt;
+
+int main() {
+    int rows = 5;
+    for(int i = 1; i &lt;= rows; i++) {
+        for(int space = 1; space &lt;= rows-i; space++) {
+            printf(" ");
+        }
+        for(int j = 1; j &lt;= 2*i-1; j++) {
+            printf("*");
+        }
+        printf("\n");
+    }
+    return 0;
+}
+                </code></pre>
+            </div>
+            <div class="pattern">
+                <h3>Inverted Pyramid</h3>
+                <pre><code>
+#include &lt;stdio.h&gt;
+
+int main() {
+    int rows = 5;
+    for(int i = rows; i &gt;= 1; i--) {
+        for(int space = 1; space &lt;= rows-i; space++) {
+            printf(" ");
+        }
+        for(int j = 1; j &lt;= 2*i-1; j++) {
+            printf("*");
+        }
+        printf("\n");
+    }
+    return 0;
+}
+                </code></pre>
+            </div>
+        </section>
+
+        <section id="advanced-patterns">
+            <h2>Advanced Patterns</h2>
+            <div class="pattern">
+                <h3>Diamond</h3>
+                <pre><code>
+#include &lt;stdio.h&gt;
+
+int main() {
+    int n = 5;
+    int space = n - 1;
+
+    for (int i = 1; i &lt;= n; i++) {
+        for (int j = 1; j &lt;= space; j++)
+            printf(" ");
+        space--;
+        for (int j = 1; j &lt;= 2*i-1; j++)
+            printf("*");
+        printf("\n");
+    }
+
+    space = 1;
+    for (int i = 1; i &lt;= n-1; i++) {
+        for (int j = 1; j &lt;= space; j++)
+            printf(" ");
+        space++;
+        for (int j = 1; j &lt;= 2*(n-i)-1; j++)
+            printf("*");
+        printf("\n");
+    }
+    return 0;
+}
+                </code></pre>
+            </div>
+            <div class="pattern">
+                <h3>Hollow Square</h3>
+                <pre><code>
+#include &lt;stdio.h&gt;
+
+int main() {
+    int size = 5;
+    for(int i = 0; i &lt; size; i++) {
+        for(int j = 0; j &lt; size; j++) {
+            if (i == 0 || i == size-1 || j == 0 || j == size-1) {
+                printf("*");
+            } else {
+                printf(" ");
+            }
+        }
+        printf("\n");
+    }
+    return 0;
+}
+                </code></pre>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Happy Coding!</p>
+    </footer>
+</body>
+</html>
