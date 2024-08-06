@@ -118,7 +118,7 @@ int main() {
 
         </section>
 
-        <section id="intermediate-patterns">
+        <section id="">
             <h2>Intermediate Patterns</h2>
 
             <!-- Start Pattern: Left Aligned Pyramid Pattern -->
@@ -351,6 +351,123 @@ int main() {
     *****
     </div>
 </div>
+
+<!-- Start Pattern: X Pattern -->
+<div class="pattern">
+    <h3>X Pattern</h3>
+    <pre><code>
+#include &lt;stdio.h&gt;
+
+int main() {
+    int size = 7;  // You can change the size to increase or decrease the pattern
+    for(int i = 0; i &lt; size; i++) {
+        for(int j = 0; j &lt; size; j++) {
+            if (j == i || j == size - i - 1) {
+                printf("*");
+            } else {
+                printf(" ");
+            }
+        }
+        printf("\n");
+    }
+    return 0;
+}
+    </code></pre>
+    <div class="output">
+    *     *
+     *   *
+      * *
+       *
+      * *
+     *   *
+    *     *
+    </div>
+</div>
+<!-- End Pattern: X Pattern -->
+<!-- Start Pattern: X Using Number Pattern -->
+<div class="pattern">
+    <h3>X Using Number Pattern</h3>
+    <pre><code>
+#include &lt;stdio.h&gt;
+
+int main() {
+    int size = 7;  // You can change the size to increase or decrease the pattern
+    for(int i = 0; i &lt; size; i++) {
+        for(int j = 0; j &lt; size; j++) {
+            if (j == i || j == size - i - 1) {
+                printf("%d", j + 1);
+            } else {
+                printf(" ");
+            }
+        }
+        printf("\n");
+    }
+    return 0;
+}
+    </code></pre>
+    <div class="output">
+    1     7
+     2   6
+      3 5
+       4
+      5 3
+     6   2
+    7     1
+    </div>
+</div>
+<!-- End Pattern: X Using Number Pattern -->
+
+#include <stdio.h>
+
+    int main() {
+        int size = 7;  // You can change the size to increase or decrease the pattern
+        for(int i = 0; i < size; i++) {
+            for(int j = 0; j < size; j++) {
+                if (j == i || j == size - i - 1) {
+                    printf("%c", 'A' + i);
+                } else {
+                    printf(" ");
+                }
+            }
+            printf("\n");
+        }
+        return 0;
+    }
+    
+
+<!-- Start Pattern: X Using Char Pattern -->
+<div class="pattern">
+    <h3>X Using Char Pattern</h3>
+    <pre><code>
+#include &lt;stdio.h&gt;
+
+int main() {
+    int size = 7;  // You can change the size to increase or decrease the pattern
+    for(int i = 0; i &lt; size; i++) {
+        for(int j = 0; j &lt; size; j++) {
+            if (j == i || j == size - i - 1) {
+                printf("%c", 'A' + i);
+            } else {
+                printf(" ");
+            }
+        }
+        printf("\n");
+    }
+    return 0;
+}
+    </code></pre>
+    <div class="output">
+    A     G
+     B   F
+      C E
+       D
+      E C
+     F   B
+    G     A
+    </div>
+</div>
+<!-- End Pattern: X Using Char Pattern -->
+
 
             <!-- Pattern: F Pattern -->
 <div class="pattern">
