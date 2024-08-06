@@ -5,6 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Patterns - Pattern Printing Guide</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .output {
+            font-family: monospace;
+            white-space: pre;
+            background-color: #e9ecef;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .pattern {
+            margin-bottom: 30px;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -19,6 +32,8 @@
     <main>
         <section id="basic-patterns">
             <h2>Basic Patterns</h2>
+
+            <!-- Pattern 1 -->
             <div class="pattern">
                 <h3>Single Star</h3>
                 <pre><code>
@@ -29,7 +44,12 @@ int main() {
     return 0;
 }
                 </code></pre>
+                <div class="output">
+                    *
+                </div>
             </div>
+
+            <!-- Pattern 2 -->
             <div class="pattern">
                 <h3>Square of Stars</h3>
                 <pre><code>
@@ -45,27 +65,23 @@ int main() {
     return 0;
 }
                 </code></pre>
+                <div class="output">
+                    *****
+                    *****
+                    *****
+                    *****
+                    *****
+                </div>
             </div>
-            <div class="pattern">
-                <h3>Right-Angled Triangle</h3>
-                <pre><code>
-#include &lt;stdio.h&gt;
 
-int main() {
-    for(int i = 1; i &lt;= 5; i++) {
-        for(int j = 1; j &lt;= i; j++) {
-            printf("*");
-        }
-        printf("\n");
-    }
-    return 0;
-}
-                </code></pre>
-            </div>
+            <!-- Add more patterns here with similar structure -->
+
         </section>
 
         <section id="intermediate-patterns">
             <h2>Intermediate Patterns</h2>
+
+            <!-- Pattern 1 -->
             <div class="pattern">
                 <h3>Pyramid</h3>
                 <pre><code>
@@ -85,7 +101,16 @@ int main() {
     return 0;
 }
                 </code></pre>
+                <div class="output">
+                      *
+                     ***
+                    *****
+                   *******
+                  *********
+                </div>
             </div>
+
+            <!-- Pattern 2 -->
             <div class="pattern">
                 <h3>Inverted Pyramid</h3>
                 <pre><code>
@@ -105,11 +130,23 @@ int main() {
     return 0;
 }
                 </code></pre>
+                <div class="output">
+                  *********
+                   *******
+                    *****
+                     ***
+                      *
+                </div>
             </div>
+
+            <!-- Add more patterns here with similar structure -->
+
         </section>
 
         <section id="advanced-patterns">
             <h2>Advanced Patterns</h2>
+
+            <!-- Pattern 1 -->
             <div class="pattern">
                 <h3>Diamond</h3>
                 <pre><code>
@@ -140,7 +177,20 @@ int main() {
     return 0;
 }
                 </code></pre>
+                <div class="output">
+                      *
+                     ***
+                    *****
+                   *******
+                  *********
+                   *******
+                    *****
+                     ***
+                      *
+                </div>
             </div>
+
+            <!-- Pattern 2 -->
             <div class="pattern">
                 <h3>Hollow Square</h3>
                 <pre><code>
@@ -161,7 +211,48 @@ int main() {
     return 0;
 }
                 </code></pre>
+                <div class="output">
+                *****
+                *   *
+                *   *
+                *   *
+                *****
+                </div>
             </div>
+
+            <!-- Add more patterns here with similar structure -->
+
+            <!-- Pattern: F Pattern -->
+<div class="pattern">
+    <h3>F Pattern</h3>
+    <pre><code>
+#include &lt;stdio.h&gt;
+
+int main() {
+    int rows = 5;
+    for(int i = 0; i &lt; rows; i++) {
+        for(int j = 0; j &lt; rows; j++) {
+            if (i == 0 || i == rows/2 || (j == 0 && i &lt; rows)) {
+                printf("*");
+            } else {
+                printf(" ");
+            }
+        }
+        printf("\n");
+    }
+    return 0;
+}
+    </code></pre>
+    <div class="output">
+    *****
+    *    
+    *****
+    *    
+    *    
+    </div>
+</div>
+
+
         </section>
     </main>
     <footer>
