@@ -76,6 +76,26 @@ int main() {
 
             <!-- Add more patterns here with similar structure -->
 
+            <!-- Pattern: A to Z Pattern -->
+<div class="pattern">
+    <h3>A to Z Pattern</h3>
+    <pre><code>
+#include &lt;stdio.h&gt;
+
+int main() {
+    for(char c = 'A'; c &lt;= 'Z'; c++) {
+        printf("%c ", c);
+    }
+    printf("\n");
+    return 0;
+}
+    </code></pre>
+    <div class="output">
+    A B C D E F G H I J K L M N O P Q R S T U V W X Y Z 
+    </div>
+</div>
+ <!-- End Pattern: A to Z Pattern -->
+
             <!-- Pattern: 1 to 10 Pattern -->
 <div class="pattern">
     <h3>1 to 10 Pattern</h3>
@@ -100,6 +120,66 @@ int main() {
 
         <section id="intermediate-patterns">
             <h2>Intermediate Patterns</h2>
+
+            <!-- Start Pattern: Left Aligned Pyramid Pattern -->
+<div class="pattern">
+    <h3>Left Aligned Pyramid Pattern</h3>
+    <pre><code>
+#include &lt;stdio.h&gt;
+
+int main() {
+    int rows = 5;
+    for(int i = 1; i &lt;= rows; i++) {
+        for(int j = 1; j &lt;= i; j++) {
+            printf("*");
+        }
+        printf("\n");
+    }
+    return 0;
+}
+    </code></pre>
+    <div class="output">
+    *
+    **
+    ***
+    ****
+    *****
+    </div>
+</div>
+<!-- End Pattern: Left Aligned Pyramid Pattern -->
+
+<!-- Start Pattern: Right Aligned Pyramid Pattern -->
+<div class="pattern">
+    <h3>Right Aligned Pyramid Pattern</h3>
+    <pre><code>
+#include &lt;stdio.h&gt;
+
+int main() {
+    int rows = 5;
+    for(int i = 1; i &lt;= rows; i++) {
+        // Print spaces
+        for(int j = i; j &lt; rows; j++) {
+            printf(" ");
+        }
+        // Print stars
+        for(int j = 1; j &lt;= i; j++) {
+            printf("*");
+        }
+        printf("\n");
+    }
+    return 0;
+}
+    </code></pre>
+    <div class="output">
+        *
+       **
+      ***
+     ****
+    *****
+    </div>
+</div>
+<!-- End Pattern: Right Aligned Pyramid Pattern -->
+
 
             <!-- Pattern 1 -->
             <div class="pattern">
